@@ -1,27 +1,76 @@
-import {data} from "../helper/data"
+import { useState } from "react"
 
-const PleyerCard = () => {
+import Card from 'react-bootstrap/Card';
+
+
+
+const PleyerCard = ({name, img,  statistics }) => {
+const [isshow , setIsShow] = useState(true)
+const handleShow = () => {
+setIsShow(!isshow)
+
+
+}
+
   return (
-    <div className="row">
-{data.map((items, i) => {
-console.log(items)
-const {name, img,  statistics } = items
-console.log(statistics)
-return(
-      <div className="col col-sm-6 col-md-4 col-lg-3 ">
- <div className="card" style={{ width: "18rem" }}>
-  <img src={img} className="card-img-top" alt="..." style={{ width: "18rem", height : "20rem" }} />
-  <div className="card-body">
-    <h5 className="card-title">{name}</h5>
-  </div>
+
+<div >
+
+<Card className="cards" onClick={handleShow} style={{ width: '18rem', height:"24rem" }}>
+
+
+  {
+isshow ? (
+<div>
+  <Card.Img className="img" variant="top" style={{height:"20rem"}} src={img} />
+<Card.Title>{name}</Card.Title>
 </div>
 
-      </div>
+       
+    
+  
+) : (
+  <>
+  
+
+<ul class="m-auto  p-2 rounded-2" style={{height:"24rem", width:"18rem"}}>
+
+  <div className="mt-5">
+  <Card.Title className="text-white">{name}</Card.Title>
+
+{
+  statistics.map((item) =>{
+
+return(
+
+  <li class="h5 text-start list-unstyled  mx-auto mt-3 p-2" >📽️ {item}</li>
+ 
+
+    
 )
-})}
 
 
-    </div>
+
+  })
+
+}
+
+  </div>
+
+
+</ul>
+
+</>
+)
+
+  }
+    
+    </Card>  
+</div>
+
+
+
+ 
   )
 }
 

@@ -5,12 +5,28 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  border-radius: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.container{
+  background-image: url(https://us.123rf.com/450wm/ghenadie/ghenadie1604/ghenadie160400080/55827845-cinema-background-with-film-strips-and-light-rays-vector-illustration.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 20px;
+}
+@media only screen and (max-width: 768px){
+.colum{
+display: flex;
+justify-content: center;
+}
+
 }
 
 .App-header {
@@ -28,7 +44,41 @@
   color: #61dafb;
 }
 body{
-  background-color: #e46735;
+  background-image: url(https://e0.pxfuel.com/wallpapers/936/151/desktop-wallpaper-movie-minimal-mask-v-for-vendetta-background-99b290.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.img{
+
+  &:hover{
+    transform: scale(1.2);
+    transition: all 1s ease-in;
+    cursor: pointer;
+  
+  }
+
+}
+.cards{
+  overflow:hidden;
+}
+
+ul {
+  background-image: url(https://e0.pxfuel.com/wallpapers/936/151/desktop-wallpaper-movie-minimal-mask-v-for-vendetta-background-99b290.jpg);
+  background-position: contain;
+  background-repeat: no-repeat;
+
+& li {
+   transition: all 1s ease-in-out;
+ color: #e46735 !important;
+ &:hover{
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+ }
+}
+
+ 
 }
 @keyframes App-logo-spin {
   from {
