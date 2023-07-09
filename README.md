@@ -54,3 +54,10 @@ Build a Film Legends App using ReactJS.
 
 - I used git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
+## Expected Outcome
+
+https://react-film-legends-app.netlify.app/
+
+## Expected Outcome
+
+![Project React Film-App](film-app.gif)
