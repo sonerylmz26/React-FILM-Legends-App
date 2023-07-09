@@ -8,7 +8,7 @@
 ## Project Skeleton
 
 ```
-002-NBA Legends(folder)
+Film-Legends(folder)
 |
 |----readme.md         # Given to the students (Definition of the project)
 SOLUTION
@@ -30,9 +30,7 @@ SOLUTION
 ├── package.json
 └── yarn.lock
 ```
-## Expected Outcome
 
-![Project 002 Snapshot](nba-legends.gif)
 
 ## Objective
 
